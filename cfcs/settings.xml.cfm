@@ -1,6 +1,6 @@
 <!---
 <settings>
-	<dsn>soundings</dsn>
+	<dsn>isurvey</dsn>
 	<dbtype>mysql</dbtype>
 	<fromaddress>soundings@localhost</fromaddress>
 	<perpage>4</perpage>

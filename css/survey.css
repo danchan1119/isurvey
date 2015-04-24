@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face
+{
+	font-family: credit suisse type light;
+	src: url('../css/font/CreditSuisseType-Light.eot?iefix') format('eot'),
+		 url('../css/font/CreditSuisseType-Light.woff') format('woff'),
+		 url('../css/font/CreditSuisseType-Light.ttf') format('truetype');
+}
+
+body, td, th
+{
+	font-size: 18px;
+	font-family: credit suisse type light;
+	color: #000;
+	vertical-align: bottom;
+}
+
+td
+{
+	vertical-align: middle;
+}
+
+p
+{
+	margin: 0;
+	padding: 0 0 15px 0;
+}
+
+textarea
+{
+	background-color: #CCC;
+	width: 99.65%
+}
+
+input[type="number"], input[type="text"]
+{
+	background-color: #CCC;
+}
+
+.title
+{
+	font-size: 24px;
+	padding: 15px 0 0 50px;
+}
+
+.content
+{
+	min-height: 200px;
+	padding: 15px 50px 50px 50px;
+}
+
+.outerwrapper
+{
+	background: #666;
+}
+
+.innerwrapper
+{
+	width: 1200px;
+}
+
+.pages
+{
+	text-align: right;
+}
+
+.section_header
+{
+	color: #094981;
+}
+
+.question
+{
+	background-color: #003565;
+	color: #FFF;
+}
+
+.answers
+{
+	margin: 0 15px;
+}
+
+.error
+{
+	border: 1px solid #CC3333;
+	color: #CC3333;
+}
+
+.matrix
+{
+	width: 100%;
+}
+
+.surveyDone
+{
+	height: 100px;
+}
+
+#footer
+{
+	margin: 0px;
+	padding: 0px;
+}

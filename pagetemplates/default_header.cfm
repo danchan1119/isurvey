@@ -17,7 +17,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>#attributes.title#</title>
-	<link href="/iSurvey/css/main.css" type="text/css" rel="stylesheet"/>
+	<link href="/isurvey/css/main.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -27,11 +27,11 @@
               <tr>
                 <td class="shadow-left">&nbsp;</td>
 				<td class="center">
-				  <div id="logo"><img src="/iSurvey/image/logo.jpg" width="312" height="36" alt="logo" /> </div>
+				  <div id="logo"><img src="/isurvey/image/logo.jpg" width="312" height="36" alt="logo" /> </div>
 					  <div class="title">#attributes.title#</div>
 					  <table width="100%" border="0" cellspacing="0" cellpadding="0">
 					      <tr>
-					        <td><img src="/iSurvey/image/featured-inside-02.jpg" width="960" height="94" alt="banner" /></td>
+					        <td><img src="/isurvey/image/featured-inside-02.jpg" width="960" height="94" alt="banner" /></td>
 					    </tr>
 					  </table>
 

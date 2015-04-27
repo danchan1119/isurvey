@@ -4,8 +4,14 @@
 			<li class="<cfif findNoCase('/index',cgi.script_name)>active</cfif>">
 				<a href="./index.cfm"><span class="icon-home"></span>Home</a>
 			</li>
-			<li class="<cfif findNoCase('/ticket',cgi.script_name)>active</cfif>">
-				<a href="./tickets.cfm"><span class="icon-edit"></span>Tickets</a>
+			<li class="<cfif findNoCase('/surveys',cgi.script_name)>active</cfif>">
+				<a href="./surveys.cfm"><span class="icon-edit"></span>Surveys</a>
+			</li>
+			<li class="<cfif findNoCase('/questions',cgi.script_name)>active</cfif>">
+				<a href="./questions.cfm"><span class="icon-list-ol"></span>Questions</a>
+			</li>
+			<li class="<cfif findNoCase('/profile',cgi.script_name)>active</cfif>">
+				<a href="./profile.cfm"><span class="icon-user"></span>Profile</a>
 			</li>
 			<!---<li>
 				<a href="#"><span class="icon-list-alt"></span>Logs<span class="icon-lock" style="font-size:20px; color: #cd522c"></span></a>

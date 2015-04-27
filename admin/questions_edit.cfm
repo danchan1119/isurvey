@@ -27,7 +27,7 @@
 	<!---<script src="../assets/javascripts/1.3.0/adminflare-demo.min.js" type="text/javascript"></script>--->
 	<script src="../assets/javascripts/1.3.0/bootstrap.min.js" type="text/javascript"></script>
 	<script src="../assets/javascripts/1.3.0/adminflare.min.js" type="text/javascript"></script>
-	<script src="../_dev/includes/jquery.json-2.2.min.js" type="text/javascript"></script>
+	<script src="../includes/jquery.json-2.2.min.js" type="text/javascript"></script>
 </head>
 <body>
 <script type="text/javascript">demoSetBodyLayout();</script>

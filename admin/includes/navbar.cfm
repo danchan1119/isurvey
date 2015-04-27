@@ -15,7 +15,9 @@
 							<ul class="dropdown-menu">
 								<li><a href="./surveys.cfm">Surveys</a></li>
 								<li><a href="./questions.cfm">Questions</a></li>
-								<li><a href="./questiontypes.cfm">Question Types</a></li>
+								<cfif session.user.isadmin eq 1>
+									<li><a href="./questiontypes.cfm">Question Types</a></li>
+								</cfif>
 								<li><a href="./templates.cfm">Templates</a></li>
 							</ul>
 						</li>

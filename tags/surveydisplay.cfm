@@ -22,6 +22,7 @@
 <!--- Initialize certain values in the session struct --->
 <cfif not structKeyExists(session.surveys,attributes.survey.id)>
 	<cfset session.surveys[attributes.survey.id] = structNew()>
+	<cfset session.surveys[attributes.survey.id].started = now()>
 	<cfset session.surveys[attributes.survey.id].currentStep = 1>
 	<cfset session.surveys[attributes.survey.id].answers = structNew()>
 	<cfset session.surveys[attributes.survey.id].maxQuestions = application.question.getQuestions(attributes.survey.id).recordCount>

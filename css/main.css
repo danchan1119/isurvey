@@ -106,3 +106,13 @@ a
 	color: #AAAAAA;
 	text-decoration: underline;
 }
+
+.surveyName
+{
+	font-size: 32px;
+}
+
+.pages
+{
+	text-align: right;
+}

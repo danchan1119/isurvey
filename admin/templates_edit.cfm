@@ -48,40 +48,80 @@
 			================================================== -->
 		<cfimport taglib="../tags/" prefix="tags">
 
-		<legend>SURVEY OPTIONS / Templates</legend>
+		<cfif isDefined("form.cancel") or not isDefined("url.id")>
+			<cflocation url="templates.cfm" addToken="false">
+		</cfif>
+		
+		<!--- get template if not new --->
+		<cfif url.id neq "0">
+			<cfif not session.user.isAdmin>
+				<cfset t = application.template.getTemplate(url.id,session.user.id)>
+			<cfelse>
+				<cfset t = application.template.getTemplate(url.id)>
+			</cfif>
+			<cfparam name="form.name" default="#t.name#">
+			<cfparam name="form.header" default="#t.header#">
+			<cfparam name="form.footer" default="#t.footer#">
+		<cfelse>
+			<cfparam name="form.name" default="">
+			<cfparam name="form.header" default="">
+			<cfparam name="form.footer" default="">
+		</cfif>
+		<cfif isDefined("form.save")>
+			<cfset errors = "">
+			<cfif not len(form.name)>
+				<cfset errors = errors & "You must specify a name.<br>">
+			</cfif>
+			<!--- I don't care about header or footer, they can leave blank if they want... --->
+			
+			<cfif not len(errors)>
+		
+				<cfif url.id neq 0>
+					<cfset application.template.updateTemplate(url.id, form.name, form.header, form.footer, t.useridfk)>
+				<cfelse>
+					<cfset application.template.addTemplate(form.name, form.header, form.footer, session.user.id)>
+				</cfif>
+						
+				<cfset msg = "Template, #form.name#, has been updated.">
+				<cflocation url="templates.cfm?msg=#urlEncodedFormat(msg)#">
+			</cfif>
+		</cfif>
+		
+		<legend>SURVEY OPTIONS / Templates / Edit</legend>
 		
 		<div class="row-fluid">
 		
-			<!--- handle deletions --->
-			<cfif isDefined("form.mark") and len(form.mark)>
-				<cfloop index="id" list="#form.mark#">
-		        	<cfif not session.user.isAdmin>
-						<cfset application.template.deleteTemplate(id,session.user.id)>
-		            <cfelse>
-		            	<cfset application.template.deleteTemplate(id)>
-		            </cfif>
-				</cfloop>
-				<cfoutput>
-				<p>
-				<b>Template(s) deleted.</b>
-				</p>
-				</cfoutput>
-			</cfif>
-			
-			
-			<!--- get qts --->
-			<cfif not session.user.isAdmin>
-				<cfset ts = application.template.getTemplates(session.user.id)>
-			<cfelse>
-				<cfset ts = application.template.getTemplates()>
-			</cfif>	
+		<cfoutput>
+		<p>
+		Please use the form below to enter details about the template. All required fields are marked (*). Templates
+		allow you to apply your own header and footer to a survey. Please see the documentation for CSS items used by
+		questions.
+		</p>
 		
-			<tags:datatable data="#ts#" list="name" editlink="templates_edit.cfm" linkcol="name" label="Template">
-				<tags:datacol colname="name" label="Name" width="400" />
-		        <cfif session.user.isAdmin>
-					<tags:datacol colname="username" label="User" width="200" />	
-				</cfif>
-			</tags:datatable>
+		<p>
+		<cfif isDefined("errors")><ul><b>#errors#</b></ul></cfif>
+		<form action="#cgi.script_name#?#cgi.query_string#" method="post">
+		<table width="100%" cellspacing=0 cellpadding=5 class="adminEditTable">
+			<tr valign="top">
+				<td align="right"><b>(*) Name:</b></td>
+				<td><input class="span6" type="text" name="name" value="#form.name#" size="50"></td>
+			</tr>
+			<tr valign="top">
+				<td align="right"><b>Header:</b></td>
+				<td><textarea class="span6" name="header" rows=6 cols=35 wrap="soft">#form.header#</textarea></td>
+			</tr>
+			<tr valign="top">
+				<td align="right"><b>Footer:</b></td>
+				<td><textarea class="span6" name="footer" rows=6 cols=35 wrap="soft">#form.footer#</textarea></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="submit" name="save" value="Save"> <input type="submit" name="cancel" value="Cancel"></td>
+			</tr>
+		</table>
+		</form>
+		</p>
+		</cfoutput>
 		
 		</div>
 		<!-- / Content here -->

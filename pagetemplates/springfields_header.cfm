@@ -17,24 +17,18 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>#attributes.title#</title>
-	<link href="/isurvey/css/main.css" type="text/css" rel="stylesheet"/>
+	<link href="/isurvey/css/springfields.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-	<div class="outerwrapper">
-    	<div class="innerwrapper">
-        	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td class="shadow-left">&nbsp;</td>
-				<td class="center">
-				  <div id="logo"><img src="/isurvey/image/logo.jpg" width="312" height="36" alt="logo" /> </div>
-					  <!---<div class="title">#attributes.title#</div>--->
-					  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-					      <tr>
-					        <td><img src="/isurvey/image/featured-inside-02.jpg" width="960" height="94" alt="banner" /></td>
-					    </tr>
-					  </table>
-
+	<<div id="outer">
+    	<div class="container" id="header" role="banner">
+			<div class="orgLogo">
+				<img src="image/springfieldsLogo.jpg" alt="logo" />
+			</div>
+			<h1>Your Say Survey 2015</h1>
+		</div>
+		<div class="container" id="main" role="main">
 </cfoutput>
 
 <cfsetting enablecfoutputonly=true>

@@ -9,31 +9,26 @@
 --->
 
 <cfoutput>
-               	  <div id="footer">
-                    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-                          <tr>
-                            <td>
-                           	  <ul class="footer-links">
-                                	<li>Privacy Policy</li>
-                                    |
-                                	<li>Copyright Policy</li>
-                                    |
-                                	<li>User Agreement</li>
-                              </ul>
-                            </td>
-                            <td>&nbsp;</td>
-                          </tr>
-                          <tr>
-                            <td>Copyright &copy;2013 ORC International. All Rights Reserved.</td>
-                            <td>&nbsp;</td>
-                          </tr>
-                        </table>
-                    </div>
-                </td>
-                <td class="shadow-right">&nbsp;</td>
-              </tr>
-            </table>
-        </div>
+		</div></div>
+		
+		<div class="container" id="footer" role="contentinfo">	
+		    
+		        <ul class="declaration">
+		            <li><a href="http://www.orcinternational.com/uk/pages/privacy-policy-uk.aspx" target="_blank" title="Privacy Policy (opens in new window)" tabindex="601">Privacy Policy</a></li>
+		            <li><a href="http://www.orcinternational.com/uk/pages/terms-and-conditions.aspx" target="_blank" title="Terms of Use (opens in new window)" tabindex="602">Terms of Use</a></li>
+		            <li><a href="http://www.orcinternational.com/uk/pages/quality-policy.aspx" target="_blank" title="Quality Policy (opens in new window)" tabindex="603">Quality Policy</a></li>	
+		        </ul>
+		
+		        <div class="logo">
+		            <img src="image/ORClogo.png" alt="ORC International Logo" title="" />
+		        </div>
+		        
+		        <div class="copyright">
+		            &copy; 2015 ORC International. All rights reserved.
+		        </div>
+		        
+		</div>
+
     </div>
 </body>
 </html>

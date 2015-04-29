@@ -1,0 +1,811 @@
+
+/****Online Survey CCS********************************************************************************/
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+body  
+{
+	background: #F2EFFA;    /* Page Background Colour */
+	font-family: Segoe UI, Verdana, Geneva, sans-serif;
+	color: #333333;
+	font-size: 14px;
+	-webkit-text-size-adjust:none;
+	text-align: center;
+}
+
+#outer
+{
+	width: 1000px;/* Survey width (page and header banner are 20px narrower) */
+	margin: 5px auto 20px auto;
+	text-align:left;
+	overflow: hidden;
+}
+
+.container
+{
+	width: auto;
+	padding: 0 1.5% 0 1.5%;
+	display: block;
+}
+
+.row
+{
+	width: 100%;
+	display: inline-block;
+}
+
+.hidden
+{
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+
+.col-1
+{
+	width: 10%;
+	float: left;
+}
+
+.col-2
+{
+	width: 20%;
+	float: left;
+}
+
+.col-3
+{
+	width: 30%;
+	float: left;
+}
+
+.col-4
+{
+	width: 40%;
+	float: left;
+}
+
+.col-5
+{
+	width: 50%;
+	float: left;
+}
+
+.col-6
+{
+	width: 60%;
+	float: left;
+}
+
+.col-7
+{
+	width: 70%;
+	float: left;
+}
+
+.col-8
+{
+	width: 80%;
+	float: left;
+}
+
+.col-9
+{
+	width: 90%;
+	float: left;
+}
+
+.col-10
+{
+	width: 100%;
+	float: left;
+}
+
+
+fieldset 
+{
+	padding: 0;
+	margin: 0;
+}
+
+.pull-left
+{
+	float: left;
+}
+
+.pull-right
+{
+	float: right;
+}
+
+p
+{
+	padding: 10px 0 10px 0;
+}
+
+ul
+{
+	padding: 10px 0 10px 25px;
+}
+	
+li
+{
+	padding: 0 0 10px 0;
+}
+
+a:focus
+{
+	outline: 1px dotted #888888;
+}
+
+input:focus
+{
+	outline: 1px dotted #888888;
+}
+
+abbr
+{
+	border-bottom: 0 none;
+}
+
+/****HEADER*************************************************************************************/
+
+#header
+{
+	background-color: #FFFFFF; 	/* Header Background Colour */
+	border: 1px solid #CCCCCC; 
+	margin: 0 1% 5px 1%;
+	height: 85px;
+}
+
+.orgLogo
+{
+	float: right;
+	padding: 8px 20px 0px 0px;
+	width: 30%;
+	text-align: right;
+}
+
+h1
+{
+	font-weight: normal;
+	color: #09598E; 	/* Header Text Colour  */
+	font-size: 250%;
+	padding: 15px 10px 20px 20px;	
+	font-family: Segoe UI, Verdana, Geneva, sans-serif;
+	width: auto;
+	margin: 0;
+}
+
+
+
+/****MAIN*************************************************************************************/
+
+#main
+{
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	margin: 0 1% 0 1%;
+}
+
+
+/****SECTIONHEADER*************************************************************************************/
+
+h2   /* Section Header */
+{
+	font-size: 170%;
+	font-weight: normal;
+	padding: 15px 0 10px 30px;
+	margin: 0;
+	float: left;
+	width: 72%;
+	font-family: Segoe UI, Verdana, Geneva, sans-serif;
+	color: #333333;	/* Section Header Colour*/
+}
+
+.introheader
+{
+	width: 90%;
+}
+
+.progbartext
+{
+	float: right;
+	text-align: right;
+	font-size: 140%;
+	padding: 20px 30px 10px 0;
+	width: 20%;
+}
+
+#progbarcontainer
+{
+	padding: 10px 0 5px 0;
+	display: inline-block;
+	width: 100%;
+	position: relative;
+}
+
+#progbar
+{
+	background-color: #2CA4E0;	/* Progress bar colour */
+	height: 2px;
+	float: left;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+#progbar2
+{
+	background-color: #DDDDDD;
+	height: 2px;
+	float: right;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+/****INTRO*****************************************************************************/
+
+#introtext
+{
+	padding: 40px 5% 0 5%;
+	width: 90%;
+	font-size: 110%;
+}
+
+#introtext2
+{
+	padding: 0 5% 0 5%;
+	display: inline-block;
+	width: 90%;
+	font-size: 110%;
+}
+
+#introtext3
+{
+	padding: 0 5% 40px 5%;
+	display: inline-block;
+	width: 90%;
+	font-size: 110%;
+}
+
+.passwordContainer
+{
+	padding-top: 15px;
+	margin: 0 auto 0 auto;
+	width: 450px;
+	text-align: right;
+	font-weight: normal;
+	display: block;
+	height: 31px;
+	vertical-align: middle;
+}
+
+.passwordContainer input 
+{
+	padding: 5px 10px 5px 10px;
+	float: left;
+}
+
+.passwordContainer label 
+{
+	padding: 3px 10px 5px 10px;
+	float: left;
+	width: 150px;
+}
+
+/****QUESTIONAIRE*****************************************************************************************/
+
+#questionnaire
+{
+	font-size: 110%;
+	margin-top: 5px;
+}
+
+.explain
+{
+	display: inline-block;
+	width: 90%;
+	margin: 0 0 5px 30px;
+}
+
+
+.scaleheader
+{
+	margin-top: 10px;
+	font-size: 95%;
+}
+
+
+.questioncontainer
+{
+	background-color: #F4F4F4;
+	margin-top: 2px;
+	border: solid 1px #EAE9EE;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+}
+
+.questioncontainer01
+{
+    width: 100%;
+	padding: 10px 0px 10px 0px;
+    background-color: #F4F4F4;
+	margin: 10px 0 10px 0;
+	border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	border: solid 1px #EAE9EE;
+	display: block;
+	overflow: hidden;
+}
+
+.questiontextcontainer01
+{
+	display: inline-block;
+	width: 97%;
+}
+
+.questionscalecontainer01
+{
+	display: inline-block;
+	width: 95%;
+	margin: 0 2.5%;
+}
+
+.questionlabel01 label
+{
+	display: inline-block;
+	width: 100%;
+}
+
+.questionscalecontainer01:hover, .questionscalecontainer01:focus
+{
+    background: #EBEBEB;
+	border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+}
+
+.questionscalecontainer01:active
+{
+    background: #DFDFDF;
+	border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+}
+
+.questionnumber
+{
+	padding-top: 9px;
+	padding-bottom: 9px;
+	text-align: center;
+}
+
+.questionnumber01
+{
+	padding-top: 5px;
+	padding-bottom: 10px;
+	text-align: center;
+	float: left;
+	margin: 0;
+}
+
+label 
+{
+	font-weight: normal;
+}
+
+.questiontext
+{
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+
+.questiontext01
+{
+	padding-top: 5px;
+	padding-bottom: 10px;
+	float: left;
+	margin: 0;
+}
+
+.questionscaleheader
+{
+	text-align: center;
+	margin: 0;
+	padding: 5px 0 5px 0;
+}
+
+.questionscalecontainer
+{
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.questionscalecontainer:hover, .questionscalecontainer:focus
+{
+	background: #EBEBEB;
+	border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+}
+
+.questionscalecontainer:active
+{
+	background: #DFDFDF;
+	border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+}	
+
+.highlight
+{
+	background: #DFDFDF;
+	border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+}
+
+.highlight:hover, .highlight:focus
+{
+	background: #DFDFDF;
+	border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+}
+
+.questionscale
+{
+	text-align: center;
+	padding: 10px 0 0 0;
+	margin: 0;
+	float: left;
+	cursor: pointer;
+	width: 100%;
+	height: 30px;
+}
+
+.questionscale input
+{
+	margin: 0;
+	padding: 0;
+	/*height: 20px;
+	width: 20px;*/
+	cursor: pointer;
+}
+
+.questionlabel
+{	
+	margin: 0;
+	padding: 0;
+	width: 85%;
+	float: left;
+}
+
+.questionlabel label
+{
+	margin: 0;
+	line-height: 235%;
+	cursor: pointer;
+	width: 100%;
+}
+
+.questionscale01
+{
+	text-align: center;
+	padding: 5px 0 0 0;
+	margin: 0;
+	height: 25px;
+	float: left;
+	cursor: pointer;
+}
+
+.questionscale01 input
+{
+	margin: 0;
+	padding: 0;
+	/*height: 20px;
+	width: 20px;*/
+	cursor: pointer;
+}
+
+.questionlabel01
+{	
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.questionlabel01 label
+{
+	width: 100%;
+	margin: 0;
+	line-height: 200%;
+	cursor: pointer;
+}
+
+.questionscalecontainertext
+{
+	padding: 0 10% 0 10%;
+}
+
+.inputtext
+{
+	padding: 5px 10px 5px 10px;
+	position:relative;
+	font-size: 100%;
+	font-family: Segoe UI, Verdana, Geneva, sans-serif;
+	border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	border: 1px solid #CCCCCC;
+}
+
+.inputnumber
+{
+	padding: 5px 10px 5px 10px;
+	position:relative;
+	font-size: 100%;
+	font-family: Segoe UI, Verdana, Geneva, sans-serif;
+	border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	border: 1px solid #CCCCCC;
+	width: 101px;
+}
+
+.questionscalecontainertext textarea 
+{
+	width: 100%;
+	padding: 5px;
+	font-size: 100%;
+	font-family: Segoe UI, Verdana, Geneva, sans-serif;
+	border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	border: 1px solid #CCCCCC;
+}
+
+#error
+{
+    font-size: 110%;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #ff0000;
+    margin-top: 20px;
+	padding: 2px 0 4px 5px;
+	position: relative;
+}
+
+.custom-combobox 
+{
+    position: relative;
+    display: inline-block;
+}
+
+.custom-combobox-toggle 
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+}
+
+.custom-combobox-input 
+{
+    margin: 0;
+    padding: 0.5em;
+	background: #ffffff;
+}
+
+.ui-menu-item 
+{
+    text-align:left;
+}
+
+.ui-state-default
+{
+	border: solid 1px #CCCCCC;
+}
+
+.ui-widget select
+{
+	padding: 5px 5px 5px 5px;
+	border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	border: 1px solid #CCCCCC;
+	font-family: Segoe UI, Verdana, Geneva, sans-serif;
+	font-size: 95%;
+	line-height: 2em;
+}
+
+
+
+/****NAVIGATION*****************************************************************************************/
+
+#navigation
+{
+	margin: 20px 0 25px 0;
+	position: relative;
+}
+
+.btn-group 
+{
+	display: inline-block;
+	text-align: right;
+	width: 100%;
+}
+
+.glyphicon
+{
+	color: #09598E;
+}
+
+.button
+{
+    float: right;
+	position: relative;
+	margin-right: 25px;
+}
+
+#nextButton
+{
+	margin-right: 0;
+}
+
+.button input 			
+{
+    cursor: pointer;
+	width: 137px;
+	height: 54px;
+	-webkit-appearance: none;
+    -webkit-border-radius: 0;
+	background: none;
+	border: none;
+}
+
+.buttonLabel
+{	
+	position:absolute;
+	text-align: center;
+	width: 135px;
+	height: 40px;
+	font-size: 120%;
+	cursor: pointer;
+	padding-top: 12px;
+	border: 1px solid #cccccc;
+	background: #ffffff;	/* Secondary Buttons colour */
+	color: #333333;		/* Secondary Buttons label colour */
+}
+
+.buttonLabel:hover, .buttonLabel:focus, .buttonLabel:active
+{
+	background: #EBEBEB;	/* Secondary Buttons hover colour */
+}
+
+.buttonLabel:active
+{
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+	box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+}
+
+#nextLabel
+{	
+	border-radius: 6px;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	border: 1px solid #09598E;
+	background: #8AC8EF;	/* Next Button colour */
+	color: #333333;		/* Next Buttons label colour */
+}
+
+#nextLabel:hover, #nextLabel:focus, #nextLabel:active
+{
+	background: #69BAE7;	/* Next Button hover colour */
+}
+
+#backLabel
+{
+	border-radius: 6px;
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+}
+
+
+@font-face 
+{
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.glyphicon 
+{
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  color: #09598E;	/* Button Arrows colour */
+}
+
+.glyphicon-chevron-right:before {
+  content: "\e080";
+}
+
+.glyphicon-chevron-left:before {
+  content: "\e079";
+}
+
+/****FOOTER*************************************************************************************/
+
+#footer
+{
+	margin: 0 1% 0 1%;
+	height: 60px;
+}
+
+#footer ul.declaration
+{
+	float: left;
+	text-align: left;
+	margin: 8px 0 0 20px;
+	padding: 0;
+}
+
+#footer li
+{
+	display: inline;
+	padding: 0 8px 0 3px;
+}
+
+#footer a
+{
+	color: #53606E;
+}
+
+#footer a:hover 
+{
+	color: #FFFFFF;
+	background-color: #53606E;
+}
+
+#footer .logo
+{
+	float: right;
+	text-align: right;
+	margin: 5px 20px 0 0;
+}
+
+#footer .copyright
+{
+	margin: 8px 0 0 20px;
+	float: left;
+	text-align: left;
+	color: #53606E;
+	width: 70%;
+}
+
